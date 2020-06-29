@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * author Jomashop.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="JomaShop_NewRelicMonitoring" setup_version="1.0.0">
+        <sequence>
+            <module name="Magento_NewRelicReporting" />
+            <module name="Magento_GraphQl" />
+        </sequence>
+    </module>
+</config>
