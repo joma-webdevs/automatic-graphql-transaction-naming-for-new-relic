@@ -91,3 +91,6 @@ query {
 ```
 
 In NR, the transaction name would be `/GraphQl/Controller/GraphQl\Query\Multiple`
+
+## Change Log
+- v1.1.0: Able to log GraphQl errors

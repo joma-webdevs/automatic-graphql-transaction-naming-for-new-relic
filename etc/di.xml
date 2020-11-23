@@ -3,4 +3,7 @@
     <type name="Magento\Framework\GraphQl\Query\QueryProcessor">
         <plugin name="newRelicNameTransaction" sortOrder="10" type="JomaShop\NewRelicMonitoring\Plugin\NewRelicMonitoring"/>
     </type>
+    <type name="Magento\Framework\GraphQl\Query\ErrorHandler">
+        <plugin name="send_exception_trace_to_newrelic" type="JomaShop\NewRelicMonitoring\Plugin\ErrorHandler"/>
+    </type>
 </config>
