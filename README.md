@@ -93,4 +93,5 @@ query {
 In NR, the transaction name would be `/GraphQl/Controller/GraphQl\Query\Multiple`
 
 ## Change Log
-- v1.1.0: Able to log GraphQl errors
+- v1.1.0: Able to log GraphQl errors.
+- v1.2.0: Log SOAP/REST errors. [Soap Naming does not work in Version >=2.3.2](https://github.com/newrelic/newrelic-php-agent/issues/55)

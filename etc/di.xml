@@ -6,4 +6,7 @@
     <type name="Magento\Framework\GraphQl\Query\ErrorHandler">
         <plugin name="send_exception_trace_to_newrelic" type="JomaShop\NewRelicMonitoring\Plugin\ErrorHandler"/>
     </type>
+    <type name="Magento\Webapi\Controller\Rest\SynchronousRequestProcessor">
+        <plugin name="log_rest_error" type="JomaShop\NewRelicMonitoring\Plugin\SynchronousRequestProcessor"/>
+    </type>
 </config>
