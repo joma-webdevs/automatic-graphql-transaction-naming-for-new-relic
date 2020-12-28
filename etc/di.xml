@@ -9,4 +9,8 @@
     <type name="Magento\Webapi\Controller\Rest\SynchronousRequestProcessor">
         <plugin name="log_rest_error" type="JomaShop\NewRelicMonitoring\Plugin\SynchronousRequestProcessor"/>
     </type>
+    <type name="JomaShop\NewRelicMonitoring\Controller\Soap">
+        <plugin name="log_soap_error" type="JomaShop\NewRelicMonitoring\Plugin\Soap"/>
+    </type>
+    <preference for="Magento\Webapi\Controller\Soap" type="JomaShop\NewRelicMonitoring\Controller\Soap" />
 </config>

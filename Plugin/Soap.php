@@ -3,9 +3,9 @@
 namespace JomaShop\NewRelicMonitoring\Plugin;
 
 use Magento\NewRelicReporting\Model\NewRelicWrapper;
-use Magento\Webapi\Controller\Rest\SynchronousRequestProcessor as MagentoSynchronousRequestProcessor;
+use JomaShop\NewRelicMonitoring\Controller\Soap as SoapController;
 
-class SynchronousRequestProcessor
+class Soap
 {
     /**
      * @var NewRelicWrapper
@@ -22,14 +22,7 @@ class SynchronousRequestProcessor
         $this->newRelicWrapper = $newRelicWrapper;
     }
 
-    /**
-     * @param MagentoSynchronousRequestProcessor $requestProcessor
-     * @param callable $proceed
-     * @param mixed ...$args
-     * @return mixed
-     * @throws \Exception
-     */
-    public function aroundProcess(MagentoSynchronousRequestProcessor $requestProcessor, callable $proceed, ...$args)
+    public function aroundProcess(SoapController $soap, callable $proceed, ...$args)
     {
         try {
             $result = $proceed(...$args);
@@ -40,4 +33,5 @@ class SynchronousRequestProcessor
 
         return $result;
     }
+
 }
