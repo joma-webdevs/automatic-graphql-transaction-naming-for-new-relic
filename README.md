@@ -9,6 +9,11 @@ The logic is explained as follows:
 2. If the `operationName` field is not set, use the name of the query or mutation.
 3. If a GraphQL query consists of multiple queries or mutations, the transaction would be indicated as 'Multiple'. Note that in any cases, the `operationName` field takes the priority.
 
+## Installation
+```
+composer require jomashop/module-new-relic-monitoring-for-gql
+```
+
 ## Examples
 
 1. Operation name is set
