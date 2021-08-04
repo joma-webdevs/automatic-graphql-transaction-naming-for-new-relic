@@ -58,5 +58,6 @@ class NewRelicMonitoring
 
         $this->newRelicWrapper->setTransactionName($transactionData['transactionName']);
         $this->newRelicWrapper->addCustomParameter('GraphqlNumberOfFields', $transactionData['fieldCount']);
+        $this->newRelicWrapper->addCustomParameter('FieldNames', implode('|', $transactionData['fieldNames']));
     }
 }
