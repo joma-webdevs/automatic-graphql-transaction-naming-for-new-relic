@@ -22,7 +22,7 @@ class OperationNameTest extends \PHPUnit\Framework\TestCase
      */
     public function testGetOperationNameFromQuery($query, $actualOperationName)
     {
-        $expectedOperationName = $this->operationNameHelper->getOperationNameFromQuery($query);
+        $expectedOperationName = $this->operationNameHelper->getOperationNameFromQueryString($query);
         $this->assertEquals($expectedOperationName, $actualOperationName);
     }
 

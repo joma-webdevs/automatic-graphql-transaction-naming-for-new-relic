@@ -41,6 +41,7 @@ class NewRelicReportData
         return [
             'transactionName' => $this->buildTransactionName($gqlInfo['gql_call_type'], $finalGqlCallName),
             'fieldCount' => $gqlInfo['field_count'],
+            'fieldNames' => $gqlInfo['all_field_names'],
         ];
     }
 
@@ -55,7 +56,8 @@ class NewRelicReportData
         return [
             'field_count' => count($gqlFields),
             'gql_call_type' => $gqlFieldsInfo->name,
-            'first_field_name' =>  array_key_first($gqlFields)
+            'first_field_name' =>  array_key_first($gqlFields),
+            'all_field_names' => array_keys($gqlFields),
         ];
     }
 
